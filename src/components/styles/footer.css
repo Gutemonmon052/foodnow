@@ -260,6 +260,6 @@
 /*Make lower footer responsive for width mobile under 768px*/
 @media screen and (max-width: 768px) {
   .fn-footer-lower {
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 }
