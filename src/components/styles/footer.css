@@ -33,10 +33,14 @@
   flex-direction: column;
 }
 
-.fn-footer-first-col { gap: 50px; }
+.fn-footer-first-col {
+  gap: 50px;
+}
 .fn-footer-second-col,
 .fn-footer-third-col,
-.fn-footer-fourth-col { gap: 25px; }
+.fn-footer-fourth-col {
+  gap: 25px;
+}
 
 .fn-footer-icons {
   width: fit-content;
@@ -114,7 +118,9 @@
   display: flex;
 }
 
-.fn-footer-contact-item { gap: 8px; }
+.fn-footer-contact-item {
+  gap: 8px;
+}
 
 .fn-footer-contact-item span {
   font-size: 20px;
@@ -128,7 +134,9 @@
   gap: 4px;
 }
 
-.fn-footer-location-item { gap: 1.5px; }
+.fn-footer-location-item {
+  gap: 1.5px;
+}
 
 .fn-footer-location-item span {
   font-size: 20px;
@@ -183,18 +191,36 @@
   color: var(--fn-c-primary);
 }
 
+/* Responsive for laptop */
 @media screen and (max-width: 1560px) {
-  .fn-footer-content { padding: 0 50px; }
-  .fn-footer-upper { padding: 30px; }
-  .fn-footer-nav-list { gap: 10px; }
-  .fn-footer-location p { width: 307px; }
+  .fn-footer-content {
+    padding: 0 50px;
+  }
+  .fn-footer-upper {
+    padding: 30px;
+  }
+  .fn-footer-nav-list {
+    gap: 10px;
+  }
+  .fn-footer-location p {
+    width: 307px;
+  }
 }
 
+/* Responsive for mobile */
 @media screen and (max-width: 1024px) {
-  .fn-footer-content { padding: 0; }
-  .fn-footer-nav-list { gap: 10px; }
-  .fn-footer-nav-item { font-size: 14px; }
-  .fn-footer-contact-item span { font-size: 14px; }
+  .fn-footer-content {
+    padding: 0;
+  }
+  .fn-footer-nav-list {
+    gap: 10px;
+  }
+  .fn-footer-nav-item {
+    font-size: 14px;
+  }
+  .fn-footer-contact-item span {
+    font-size: 14px;
+  }
   .fn-footer-location p {
     width: 100%;
     max-width: 100%;
@@ -215,8 +241,12 @@
     width: 100%;
   }
   .fn-footer-contact-item span,
-  .fn-footer-nav-item { font-size: 18px; }
-  .fn-footer-lower { width: 100%; }
+  .fn-footer-nav-item {
+    font-size: 18px;
+  }
+  .fn-footer-lower {
+    width: 100%;
+  }
   .first-line {
     font-size: 14px;
     line-height: 18px !important;
@@ -224,5 +254,12 @@
   .second-line {
     font-size: 12px;
     line-height: 12px !important;
+  }
+}
+
+/*Make lower footer responsive for width mobile under 768px*/
+@media screen and (max-width: 768px) {
+  .fn-footer-location p {
+    padding: 0 20px;
   }
 }
