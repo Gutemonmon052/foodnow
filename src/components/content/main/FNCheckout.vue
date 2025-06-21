@@ -51,15 +51,15 @@ function getTotalPrice() {
       <div class="fn-checkout-details">
         <div class="fn-checkout-item">
           <h3 v-if="props.order.pizza">{{ props.order.pizza.name }}</h3>
-          <p v-if="props.order.pizza">${{ getPizzaPrice().toFixed(2) }}</p>
+          <p v-if="props.order.pizza">${{ getPizzaPrice()}}</p>
         </div>
         <div class="fn-checkout-item">
           <h3 v-if="props.order.size">{{ props.order.size.name }}</h3>
-          <p v-if="props.order.size">${{ getSizePrice().toFixed(2) }}</p>
+          <p v-if="props.order.size">${{ getSizePrice()}}</p>
         </div>
         <div v-for="topping in props.order.toppings" :key="topping.id" class="fn-checkout-item">
           <h3>{{ topping.name }}</h3>
-          <p>${{ (topping.price || 0).toFixed(2) }}</p>
+          <p>${{ (topping.price || 0) }}</p>
         </div>
       </div>
     </div>
