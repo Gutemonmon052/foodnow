@@ -1,0 +1,228 @@
+.fn-footer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 135px 0 134px;
+}
+
+.fn-footer-upper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 0;
+  border-top: 1px solid var(--fn-c-black-border);
+  border-bottom: 1px solid var(--fn-c-black-border);
+}
+
+.fn-footer-upper h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--fn-c-primary);
+}
+
+.fn-footer-first-col,
+.fn-footer-second-col,
+.fn-footer-third-col,
+.fn-footer-fourth-col {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.fn-footer-first-col { gap: 50px; }
+.fn-footer-second-col,
+.fn-footer-third-col,
+.fn-footer-fourth-col { gap: 25px; }
+
+.fn-footer-icons {
+  width: fit-content;
+  height: fit-content;
+  margin: 8px 0 0 4px;
+}
+
+.fn-footer-sosmed {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.sosmed-item-list {
+  display: flex;
+  gap: 16px;
+}
+
+.sosmed-item {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid var(--fn-c-primary);
+  transition: background 0.2s ease-in-out;
+}
+
+.sosmed-item img {
+  display: block;
+  margin: auto;
+}
+
+.sosmed-item:hover {
+  background: var(--fn-c-accent);
+}
+
+.fn-footer-nav-list {
+  display: flex;
+  gap: 83px;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fn-footer-nav-item {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.fn-footer-nav-item a {
+  text-decoration: none;
+  color: var(--fn-c-link);
+  transition: color 0.2s ease-in-out;
+}
+
+.fn-footer-nav-item a:hover {
+  color: var(--fn-c-primary);
+}
+
+.fn-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fn-footer-contact-item,
+.fn-footer-location-item {
+  display: flex;
+}
+
+.fn-footer-contact-item { gap: 8px; }
+
+.fn-footer-contact-item span {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--fn-c-black);
+}
+
+.fn-footer-location {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fn-footer-location-item { gap: 1.5px; }
+
+.fn-footer-location-item span {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--fn-c-black);
+}
+
+.fn-footer-location p {
+  font-size: 20px;
+  width: 407px;
+  margin-left: 28px;
+  font-weight: 400;
+  color: var(--fn-c-black);
+}
+
+.fn-footer-lower {
+  width: 847px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0 25px 0;
+  text-align: center;
+  gap: 16px;
+}
+
+.first-line,
+.second-line {
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.first-line {
+  font-size: 18px;
+  color: var(--fn-c-black);
+  line-height: 18px !important;
+}
+
+.second-line {
+  font-size: 16px;
+  color: var(--fn-c-black);
+  line-height: 16px !important;
+}
+
+.fn-footer-lower a {
+  text-decoration: none;
+  color: var(--fn-c-link);
+  transition: color 0.2s ease-in-out;
+}
+
+.first-line a:hover {
+  color: var(--fn-c-primary);
+}
+
+@media screen and (max-width: 1560px) {
+  .fn-footer-content { padding: 0 50px; }
+  .fn-footer-upper { padding: 30px; }
+  .fn-footer-nav-list { gap: 10px; }
+  .fn-footer-location p { width: 307px; }
+}
+
+@media screen and (max-width: 1024px) {
+  .fn-footer-content { padding: 0; }
+  .fn-footer-nav-list { gap: 10px; }
+  .fn-footer-nav-item { font-size: 14px; }
+  .fn-footer-contact-item span { font-size: 14px; }
+  .fn-footer-location p {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
+  .fn-footer-upper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .fn-footer-first-col,
+  .fn-footer-second-col,
+  .fn-footer-third-col,
+  .fn-footer-fourth-col {
+    width: 100%;
+  }
+  .fn-footer-contact-item span,
+  .fn-footer-nav-item { font-size: 18px; }
+  .fn-footer-lower { width: 100%; }
+  .first-line {
+    font-size: 14px;
+    line-height: 18px !important;
+  }
+  .second-line {
+    font-size: 12px;
+    line-height: 12px !important;
+  }
+}

@@ -1,0 +1,58 @@
+@import "./base.css";
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.fn-content {
+  display: flex;
+  padding: 160px 134px 160px 134px;
+  gap: 30px;
+  width: 100vw;
+}
+
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1280px) {
+  .fn-content {
+    padding: 50px;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .fn-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+/*
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  } 
+}*/

@@ -1,0 +1,64 @@
+.fn-jumbotron-content {
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fn-jumbotron-image {
+  width: 100vw;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.fn-jumbotron-image img {
+  width: 100vw;
+  height: 738px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.fn-jumbotron-text {
+  position: absolute;
+  z-index: 1;
+  width: max-content;
+  height: max-content;
+}
+
+.fn-jumbotron-text h1 {
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--fn-c-primary);
+}
+
+/* Responsive for laptop */
+
+@media screen and (max-width: 1280px) {
+  .fn-jumbotron-image img {
+    height: 500px;
+  }
+}
+
+/* Responsive for mobile*/
+
+@media only screen and (max-width: 1024px) {
+  .fn-jumbotron-content {
+    min-height: 400px;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .fn-jumbotron-image img {
+    height: 400px;
+  }
+
+  .fn-jumbotron-text h1 {
+    font-size: 48px;
+    width: 100%;
+    text-align: center;
+  }
+}

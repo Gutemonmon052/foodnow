@@ -1,0 +1,182 @@
+.fnnavbar-res,
+.fnnavbar-overlay {
+  display: none;
+}
+
+.fnnavbar-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100vw;
+  padding: 23px 136px 24px 130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.fn-navbar,
+.fn-user {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.fn-navbar a {
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  color: var(--fn-c-white);
+  font-weight: 700;
+  gap: 10px;
+}
+
+.fn-navbar a.active {
+  color: var(--fn-c-primary);
+}
+
+.fn-navbar a:hover,
+.fn-user .secondary-btn:hover {
+  color: var(--color-link-hover);
+  transition: all 0.1s ease-in-out;
+}
+
+.fn-user .primary-btn,
+.fn-user .secondary-btn {
+  color: var(--fn-c-white);
+  font-weight: 700;
+}
+
+.fn-user .primary-btn {
+  background: var(--fn-c-primary);
+  padding: 14px 43.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: background 0.1s ease-in-out;
+}
+
+.fn-user .primary-btn:hover {
+  background: var(--color-btn-hover);
+}
+
+@media screen and (max-width: 1580px) {
+  .fnnavbar-content {
+    padding: 23px 50px 24px 50px;
+  }
+  .fn-navbar {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .fnnavbar-content {
+    display: none;
+  }
+
+  .fnnavbar-res {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    z-index: 1000;
+  }
+
+  .fnnavbar-res .fn-menus,
+  .fn-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fnnavbar-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333333ec;
+    z-index: 2000;
+    width: 100vw;
+    height: 100vh;
+    padding: 18px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    animation: none;
+  }
+
+  .fnnavbar-overlay[style*="display: flex"] {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeInOverlay 0.3s;
+  }
+
+  @keyframes fadeInOverlay {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fn-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+  }
+
+  .fn-option .fn-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    gap: 10px;
+    font-size: 24px;
+  }
+
+  .fn-option .fn-navbar a {
+    width: 100%;
+    text-align: left;
+    padding: 12px 0 12px 10px;
+  }
+
+  .fnnavbar-overlay .fn-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .fnnavbar-overlay .fn-user .primary-btn,
+  .fnnavbar-overlay .fn-user .secondary-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

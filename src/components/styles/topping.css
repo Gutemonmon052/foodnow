@@ -1,0 +1,64 @@
+.fn-pizza-tps-item {
+  display: flex;
+  border-radius: 50px;
+  width: 166px;
+  border: 1px solid var(--fn-c-black-border);
+  align-items: center;
+  justify-content: center;
+  padding: 14px 12px 14px 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.fn-pizza-tps-item input:disabled + .fn-checkbox-label,
+.fn-pizza-tps-item:has(input:disabled) {
+  cursor: not-allowed;
+  background-color: var(--color-btn-disabled);
+  border: none !important;
+}
+
+.fn-pizza-tps-item input:disabled + .fn-checkbox-label {
+  color: var(--color-text-disabled);
+}
+
+/* Hide border on hover if disabled */
+.fn-pizza-tps-item:has(input:disabled):hover {
+  border: none !important;
+}
+
+.fn-checkbox-label {
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--fn-c-black);
+}
+
+.fn-pizza-tps-item:hover {
+  border: 1px solid var(--fn-c-primary);
+}
+
+.fn-pizza-tps-item:hover span {
+  color: var(--fn-c-primary);
+}
+
+.fn-pizza-tps-item.active {
+  border: 1px solid var(--fn-c-primary);
+  background-color: var(--fn-c-accent);
+}
+
+.fn-pizza-tps-item.active span {
+  color: var(--fn-c-primary);
+}
+
+/*Responsive*/
+@media screen and (max-width: 1580px) {
+  .fn-checkbox-label {
+    font-size: 16px;
+  }
+
+  .fn-pizza-tps-item {
+    width: 100%;
+  }
+}

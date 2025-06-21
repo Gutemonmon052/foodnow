@@ -1,0 +1,110 @@
+.fn-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.fn-modal-content {
+  background-color: var(--fn-c-pure-white);
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
+  width: 404px;
+  padding: 32px;
+
+  /* Popup animation */
+  animation: fn-modal-pop 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  box-shadow: 0px 2.77px 2.21px 0px #00000005;
+  box-shadow: 0px 6.65px 5.32px 0px #00000007;
+  box-shadow: 0px 12.52px 10.02px 0px #00000009;
+  box-shadow: 0px 22.34px 17.87px 0px #0000000b;
+  box-shadow: 0px 41.78px 33.42px 0px #0000000d;
+  box-shadow: 0px 100px 80px 0px #00000012;
+}
+
+@keyframes fn-modal-pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fn-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fn-modal-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  gap: 4px;
+}
+
+.fn-modal-body h2,
+.fn-modal-body p {
+  color: var(--fn-c-black);
+  text-align: center;
+}
+
+.fn-modal-body h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--fn-c-pure-black);
+}
+
+.fn-modal-body p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.fn-modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.fn-modal-footer button {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--fn-c-primary);
+  color: var(--fn-c-white);
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  padding: 14px 12px 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fn-modal-footer button:hover {
+  background-color: var(--color-btn-hover);
+}
+
+@media screen and (max-width: 768px) {
+  .fn-modal-content {
+    width: 70%;
+  }
+}

@@ -1,0 +1,66 @@
+.fn-pizza-size-item {
+  width: fit-content;
+  height: fit-content;
+}
+
+.fn-radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--fn-c-black);
+  position: relative;
+}
+
+.fn-radio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fn-custom-radio {
+  border: 1px solid var(--fn-c-gray-border);
+  cursor: pointer;
+  width: 24px;
+  border-radius: 50%;
+  height: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.fn-radio input[type="radio"]:checked + .fn-custom-radio::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: var(--fn-c-primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease-in-out;
+}
+.fn-radio input[type="radio"]:focus + .fn-custom-radio {
+  box-shadow: 0 0 0 0.5px var(--fn-c-primary);
+  border-color: var(--fn-c-primary);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.fn-radio input[type="radio"]:checked + .fn-custom-radio {
+  box-shadow: 0 0 0 0.5px var(--fn-c-primary);
+  border-color: var(--fn-c-primary);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.fn-radio-label {
+  color: var(--fn-c-black);
+}
+.fn-radio-price {
+  color: #888;
+}
