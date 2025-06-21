@@ -259,7 +259,7 @@
 
 /*Make lower footer responsive for width mobile under 768px*/
 @media screen and (max-width: 768px) {
-  .fn-footer-location p {
+  .fn-footer-lower {
     padding: 0 20px;
   }
 }
